@@ -1,0 +1,79 @@
+.intro {
+  display: flex;
+  margin: 0 30px;
+  margin-top: 5%;
+  padding-bottom: 10%;
+  background: white;
+}
+.intro__text {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.intro__imagedIV {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn {
+  color: white;
+  padding: 10px 20px;
+  border-radius: 100vh;
+  cursor: pointer;
+  background: var(--paste-color);
+  font-weight: 700;
+  font-size: 21px;
+  transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.btn:hover {
+  background: white !important;
+  color: var(--paste-color);
+}
+.intro__text {
+  margin-right: 15%;
+}
+
+.intro__title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: var(--dark-purple);
+}
+
+.intro__info {
+  font-size: 1.2rem;
+  color: var(--gray-color);
+  margin: max(1%, 20px) 0 max(4%, 20px) 0;
+}
+
+@media (max-width: 768px) {
+  .intro__text {
+    margin-right: 5%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .intro {
+    overflow-x: hidden;
+    flex-direction: column-reverse;
+  }
+  .intro__text {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 10% 0;
+  }
+  .intro__title {
+    font-size: 2.5rem;
+  }
+  .intro__image {
+    height: 50vh;
+    width: auto;
+  }
+  .btn {
+    font-size: 16px;
+  }
+}
