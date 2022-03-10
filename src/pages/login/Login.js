@@ -27,11 +27,14 @@ function Login() {
   const toggle = () => {
     dispatch(toggleActive());
   };
-
+  const clear = () => {
+    setFormValue({ username: "", password: "" });
+  };
   const handleSubmit = (e) => {
     e.preventDefault();
     if (username && password) {
       dispatch(login({ formValue, history }));
+      clear();
     }
   };
 
